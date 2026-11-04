@@ -1,0 +1,70 @@
+
+/*   conteiner pricipal */
+
+.conteiner-principal{
+    background-color: aqua ;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    
+} 
+
+/*infos do perfil*/
+
+.infos-perfil{
+    background-color: yellow;
+    width: 1000px;
+    height: 500px;
+    display: flex;
+}
+
+/* foto de perfil */
+
+.foto-perfil{
+    background-color: blueviolet;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    }
+
+#perfil { width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    border: 3px solid white;}
+
+
+
+    /* infos do perfil*/
+
+    .usuario{
+        background-color: blue;
+        width: 100%;
+        height: 300px;
+        
+    }
+
+    .postagem {margin:2px;}
+
+    #seguidores{
+        margin:50px ;
+    }
+
+
+    #nome {
+        margin: 50px;
+    }
+
+
+    /* boteos de seguir e deixar de seguir*/
+
+ .seguir{
+    background-color: aquamarine;
+ }
