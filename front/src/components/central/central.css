@@ -1,0 +1,237 @@
+html, body {
+    margin: 0;
+    padding: 0;
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/*   conteiner pricipal */
+
+.conteiner-principal{
+    background-color: rgb(41, 41, 41) ;
+    width: 100vw;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+
+
+    
+    
+} 
+
+/*infos do perfil*/
+
+.infos-perfil{
+    background-color: rgb(41, 41, 41);
+
+    width: 100%;
+    max-width: 1000px;
+    min-height: 500px;
+
+    display: grid;
+
+    grid-template-columns: 250px minmax(0, 1fr);
+
+    grid-template-areas:
+        "foto usuario"
+        "destaques destaques";
+    
+}
+
+/* foto de perfil */
+
+.foto-perfil{
+    background-color: rgb(41, 41, 41);
+    width: 250px;
+    height: 300px;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    }
+
+#perfil { width: 200px;
+    height: 200px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    border: 3px solid white;}
+
+
+
+    /* infos do perfil*/
+
+    .usuario{
+        background-color: rgb(41, 41, 41);
+        width: 100%;
+        height: 300px;
+        
+        
+    }
+
+    .postagem {margin:2px;}
+
+    #seguidores{
+        position:relative;
+        top: -50px;
+
+        margin:50px ;
+    }
+
+
+    #nome {
+        position:relative;
+        top: -40px;
+        margin-left: 90px;
+        margin: 50px;
+    }
+
+    #bios {
+        position:relative;
+        top: -90px;
+        margin:50px;
+        
+    }
+
+
+    /* boteos de seguir e deixar de seguir*/
+
+ .seguir{
+    position: relative;
+    top: -80px;
+
+
+ }
+
+.botoes{
+ 
+ margin:-20px 10px;
+ width: 290px;
+ height: 40px;
+
+ position: relative;
+ top: -45px;
+ 
+
+}
+
+/*destaques */
+
+
+.destaques{
+    background-color: rgb(41, 41, 41);
+    width: 400%;
+    height:200px ;
+
+    
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+
+    overflow:auto;
+
+    overflow-y: hidden;
+
+    
+}
+.destacando {
+    display: flex;
+
+    margin-top: 30px;
+   
+}
+
+/*fotoso dos destaques*/
+
+.fotinhas {
+   width: 120px;
+    height: 120px;
+
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+
+    border: 3px solid white;
+}
+
+.conteiner-fluid  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+/* resposividade */
+
+
+
+@media (max-width: 768px) {
+
+    .conteiner-principal {
+        padding: 15px;
+    }
+
+    .infos-perfil {
+        gap: 15px;
+    }
+
+    .foto-perfil {
+        width: 180px;
+        min-width: 130px;
+    }
+
+    #perfil {
+        width: 130px;
+        height: 130px;
+    }
+}
+
+
+
+
+
+@media (max-width: 480px) {
+
+    .conteiner-principal {
+        min-height: auto;
+        padding: 20px 12px;
+    }
+
+    .infos-perfil {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 15px;
+    }
+
+    .foto-perfil {
+        width: 100%;
+        min-width: 0;
+    }
+
+    #perfil {
+        width: 120px;
+        height: 120px;
+    }
+
+    .usuario {
+        width: 100%;
+    }
+
+    .seguir {
+        justify-content: center;
+    }
+
+    .botoes {
+        width: 100%;
+        gap: 8px;
+    }
+
+    .botoes button {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+}

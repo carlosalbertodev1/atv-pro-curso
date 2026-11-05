@@ -1,0 +1,22 @@
+.faixa {
+  background: #4a7c0f; /* verde parecido com o do site */
+}
+
+.faixa-track {
+  display: flex;
+  width: max-content;              /* a linha tem o tamanho de todos os logos */
+  gap: 4rem;
+  animation: andar 25s linear infinite;
+}
+
+.faixa-item {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  white-space: nowrap;             /* não quebra linha */
+}
+
+@keyframes andar {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
