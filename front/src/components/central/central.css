@@ -1,22 +1,21 @@
 html, body {
     margin: 0;
     padding: 0;
-
+    width: 100%;
+    min-height: 100%;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-y: auto;
 }
 /*   conteiner pricipal */
 
 .conteiner-principal{
-    background-color: rgb(41, 41, 41) ;
-    width: 100vw;
-    height: 500px;
+    background-color: rgb(41, 41, 41);
+    width: 100%;
+    min-height: 500px;
+
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-
-
-    
+    align-items: flex-start;
     
 } 
 
@@ -48,6 +47,7 @@ html, body {
     display: flex;
     justify-content:center ;
     align-items: center;
+    grid-area: foto;
     }
 
 #perfil { width: 200px;
@@ -67,6 +67,8 @@ html, body {
         background-color: rgb(41, 41, 41);
         width: 100%;
         height: 300px;
+
+        grid-area:usuario;
         
         
     }
@@ -122,8 +124,9 @@ html, body {
 
 .destaques{
     background-color: rgb(41, 41, 41);
-    width: 400%;
-    height:200px ;
+    width: 100%;
+    min-width: 0;
+    height:auto ;
 
     
 
@@ -135,103 +138,163 @@ html, body {
 
     overflow-y: hidden;
 
+    grid-area:destaques;
+
     
 }
 .destacando {
     display: flex;
-
-    margin-top: 30px;
+    gap: 25px;
+    padding: 15px;
    
 }
 
 /*fotoso dos destaques*/
 
 .fotinhas {
-   width: 120px;
-    height: 120px;
+   width: 100px;
+    height: 100px;
 
     border-radius: 50%;
     object-fit: cover;
-    object-position: center;
+    
 
     border: 3px solid white;
 }
 
 .conteiner-fluid  {
+    width: auto;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     
 }
 
 /* resposividade */
 
-
-
+/* TABLETS */
 @media (max-width: 768px) {
 
-    .conteiner-principal {
-        padding: 15px;
-    }
-
     .infos-perfil {
-        gap: 15px;
-    }
-
-    .foto-perfil {
-        width: 180px;
-        min-width: 130px;
+        grid-template-columns: 180px minmax(0, 1fr);
+        width: 100%;
     }
 
     #perfil {
-        width: 130px;
-        height: 130px;
+        width: 140px;
+        height: 140px;
     }
+
+    .botoes {
+        width: 45%;
+        margin: 0 5px;
+    }
+
+    .destaques {
+        width: 100%;
+    }
+
 }
 
-
-
-
-
+/* CELULARES */
 @media (max-width: 480px) {
 
     .conteiner-principal {
+        width: 100%;
         min-height: auto;
-        padding: 20px 12px;
+        height: auto;
+        padding: 20px 10px;
     }
 
     .infos-perfil {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-        gap: 15px;
+        width: 100%;
+        min-height: auto;
+
+        display: grid;
+        grid-template-columns: 100px minmax(0, 1fr);
+
+        grid-template-areas:
+            "foto usuario"
+            "destaques destaques";
+
+        gap: 10px;
     }
 
     .foto-perfil {
         width: 100%;
-        min-width: 0;
+        height: 150px;
     }
 
     #perfil {
-        width: 120px;
-        height: 120px;
+        width: 90px;
+        height: 90px;
     }
 
     .usuario {
         width: 100%;
+        height: auto;
+    }
+
+    #nome {
+        position: static;
+        margin: 10px 0;
+        font-size: 20px;
+    }
+
+    #seguidores {
+        position: static;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
+    #bios {
+        position: static;
+        margin: 10px 0;
+        font-size: 12px;
     }
 
     .seguir {
-        justify-content: center;
+        position: static;
+        display: flex;
+        gap: 5px;
     }
 
     .botoes {
-        width: 100%;
-        gap: 8px;
+        position: static;
+        width: 50%;
+        height: 35px;
+        margin: 0;
+        font-size: 12px;
     }
 
-    .botoes button {
-        font-size: 12px;
-        padding: 8px 4px;
+    .destaques {
+        width: 100%;
+        height: auto;
     }
+
+    .destacando {
+        margin-top: 10px;
+        gap: 10px;
+    }
+
+    .fotinhas {
+        width: 75px;
+        height: 75px;
+    }
+
+    .feed {
+        width: 100%;
+        min-height: auto;
+        height: auto;
+    }
+
+    .feed .nav {
+        gap: 15px;
+    }
+
+    .publicacoes {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2px;
+    }
+
 }
