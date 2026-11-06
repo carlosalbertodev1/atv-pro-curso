@@ -6,6 +6,8 @@ import './App.css'
 import React from "react"
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Login from './tela-login/LoginApp.jsx';
+import Feed from './feed/feed.jsx'
+import Configs from './configs/configs.jsx';
 
 
 
@@ -28,10 +30,28 @@ function App() {
             <Navbar/>
             <Central/>
             <Posts/>
-            
             </>
           }
           />
+
+          <Route
+          path='/feed'
+          element = {
+            <>
+            <Feed/>
+            </>
+          }
+          />
+
+          <Route 
+          path='/configs'
+          element = {
+            <>
+            <Configs/>
+            </>
+          }
+          />
+          
 
       </Routes>
 
